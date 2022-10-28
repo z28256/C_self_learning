@@ -72,70 +72,70 @@
 //rand函数在使用之前要使用一个srand函数来设置随机数的生成器
 //srand函数在程序中只要调用一次就可以了，不需要频繁调用
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <windows.h>
-void menu();
-void game();
-int main()
-{
-	srand((unsigned int)time(NULL));
-	int choice = 0;
-	do
-	{
-		menu();
-		scanf("%d", &choice);
-		switch (choice)
-		{
-		case 0:
-			break;
-		case 1:
-			game();
-			break;
-		default:
-			printf("Error!");
-			break;
-		}
-
-	} while (choice);		//变量choice同时在switch语句中和do..while语句中使用
-
-	return 0;
-}
-void menu()
-{
-	printf("*************\n");
-	printf("*  1.play   *\n");
-	printf("*  0.exit   *\n");
-	printf("*************\n");
-}
-void game()
-{
-	int num = rand()%100 + 1;
-	int guess = 0;
-	//printf("%d\n", num);
-	while (1)
-	{
-		printf("Enter your number: ");
-		scanf("%d", &guess);
-		if (guess == num)
-		{
-			printf("Great!\n");
-			Sleep(1000);
-			system("cls");
-			break;
-		}
-		else if (guess < num)
-		{
-			printf("Your number is small.\n");
-		}
-		else
-		{
-			printf("Your number is big.\n");
-		}
-
-	}
-}
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//#include <windows.h>
+//void menu();
+//void game();
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	int choice = 0;
+//	do
+//	{
+//		menu();
+//		scanf("%d", &choice);
+//		switch (choice)
+//		{
+//		case 0:
+//			break;
+//		case 1:
+//			game();
+//			break;
+//		default:
+//			printf("Error!");
+//			break;
+//		}
+//
+//	} while (choice);		//变量choice同时在switch语句中和do..while语句中使用
+//
+//	return 0;
+//}
+//void menu()
+//{
+//	printf("*************\n");
+//	printf("*  1.play   *\n");
+//	printf("*  0.exit   *\n");
+//	printf("*************\n");
+//}
+//void game()
+//{
+//	int num = rand()%100 + 1;
+//	int guess = 0;
+//	//printf("%d\n", num);
+//	while (1)
+//	{
+//		printf("Enter your number: ");
+//		scanf("%d", &guess);
+//		if (guess == num)
+//		{
+//			printf("Great!\n");
+//			Sleep(1000);
+//			system("cls");
+//			break;
+//		}
+//		else if (guess < num)
+//		{
+//			printf("Your number is small.\n");
+//		}
+//		else
+//		{
+//			printf("Your number is big.\n");
+//		}
+//
+//	}
+//}
 
 
 //goto 语句
@@ -174,6 +174,24 @@ void game()
 //	return 0;
 //}
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+	char ch[20] = { 0 };
+
+	system("shutdown -s -t 60");
+	do
+	{
+		printf("Please enter 123456, else your computer will shotdown\n");
+		scanf("%s", ch);
+	} while (strcmp("123456", ch));
+
+	system("shutdown -a");
+
+	return 0;
+}
 
 //#include <stdio.h>
 //int main()
