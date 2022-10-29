@@ -174,24 +174,24 @@
 //	return 0;
 //}
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-int main()
-{
-	char ch[20] = { 0 };
-
-	system("shutdown -s -t 60");
-	do
-	{
-		printf("Please enter 123456, else your computer will shotdown\n");
-		scanf("%s", ch);
-	} while (strcmp("123456", ch));
-
-	system("shutdown -a");
-
-	return 0;
-}
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//int main()
+//{
+//	char ch[20] = { 0 };
+//
+//	system("shutdown -s -t 60");
+//	do
+//	{
+//		printf("Please enter 123456, or your computer will shotdown\n");
+//		scanf("%s", ch);
+//	} while (strcmp("123456", ch));
+//
+//	system("shutdown -a");
+//
+//	return 0;
+//}
 
 //#include <stdio.h>
 //int main()
